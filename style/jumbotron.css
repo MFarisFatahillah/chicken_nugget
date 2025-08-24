@@ -1,0 +1,78 @@
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.jumbotron{
+  width: 300px;
+  
+}
+
+.jumbotron img{
+  width: 100%;
+  height: auto;
+  padding-left: 30px;
+}
+
+.jumbotron-text{
+  text-align: center;
+}
+
+.jumbotron-text h1{
+  font-size: 50px;
+  margin-bottom: 0px;
+  color: rgb(201, 69, 69);
+  font-style: italic;
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+/* === RESPONSIVE JUMBOTRON === */
+
+/* 📱 HP kecil (max 600px) */
+@media (max-width: 600px) {
+  .jumbotron {
+    width: 90%;              /* gambar isi hampir full layar */
+  }
+
+  .jumbotron img {
+    padding-left: 0;          /* hapus padding kiri biar gambar center */
+  }
+
+  .jumbotron-text h1 {
+    font-size: 28px;          /* kecilin font biar pas di HP */
+  }
+}
+
+/* 📱 Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .jumbotron {
+    width: 70%;              /* lebih besar di tablet */
+  }
+
+  .jumbotron img {
+    padding-left: 15px;       /* sedikit padding kiri */
+  }
+
+  .jumbotron-text h1 {
+    font-size: 40px;
+  }
+}
+
+/* 💻 Laptop/Desktop (min 901px) */
+@media (min-width: 901px) {
+  .jumbotron {
+    width: 300px;            /* default sesuai desain awal kamu */
+  }
+
+  .jumbotron img {
+    padding-left: 30px;
+  }
+
+  .jumbotron-text h1 {
+    font-size: 50px;         /* default */
+  }
+}

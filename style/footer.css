@@ -1,0 +1,65 @@
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(29, 29, 31);
+  box-shadow: 0px -3px 4px rgba(255, 255, 255, 0.1);
+}
+
+.footer-content span{
+  background-color: rgb(93, 166, 230);
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 9px;
+  padding: 5px;
+}
+
+footer p a{
+  color: white;
+  text-decoration: none;
+  background-color: rgb(93, 166, 230);
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 9px;
+  padding: 5px;
+}
+
+/* === RESPONSIVE FOOTER === */
+
+/* 📱 HP kecil (max 600px) */
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;        /* jadi tumpuk vertikal */
+    text-align: center;
+    gap: 15px;                     /* kasih jarak antar item */
+  }
+
+  .footer-content span,
+  footer p a {
+    display: inline-block;         /* biar tetap kotak rapi */
+    margin-left: 0;                /* reset margin */
+    margin-top: 5px;
+  }
+}
+
+/* 📱 Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  footer {
+    justify-content: space-between; /* agak renggang tapi tetap horizontal */
+    padding: 15px 30px;
+  }
+
+  .footer-content span,
+  footer p a {
+    padding: 4px 6px;
+  }
+}
+
+/* 💻 Laptop/Desktop (min 901px) */
+@media (min-width: 901px) {
+  footer {
+    justify-content: space-around; /* default */
+    padding: 20px 60px;
+  }
+}

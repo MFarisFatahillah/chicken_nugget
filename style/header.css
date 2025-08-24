@@ -1,0 +1,71 @@
+
+header{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.left-section p{
+  cursor: pointer;
+}
+
+.right-section{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-item{
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.nav-item:hover{
+  color: rgb(201, 69, 69);
+}
+
+/* 📱 HP kecil (max 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .left-section {
+    margin-bottom: 10px;
+  }
+
+  .right-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+/* 📱 Tablet (600px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav-item {
+    font-size: 16px;
+  }
+  
+  .right-section {
+    gap: 15px;
+  }
+}
+
+/* 💻 Laptop ke atas (>900px) */
+@media (min-width: 901px) {
+  .nav-item {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,68 @@
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -5px -2px 1px rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+nav  ul{
+  list-style: none;
+  padding: 0;
+}
+
+nav  ul li{
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+  color: gray;
+}
+
+nav ul li a:hover{
+  color: #bf6969;
+}
+/* === RESPONSIVE NAV === */
+
+/* 📱 HP kecil (max 600px) */
+@media (max-width: 600px) {
+  nav {
+    justify-content: flex-start; /* rata kiri biar natural */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; /* jadi vertical menu */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: block;   /* ubah dari inline ke block */
+    margin-right: 0;  /* reset margin kanan */
+  }
+
+  nav ul li a {
+    font-size: 16px;  /* kecilin font dikit */
+  }
+}
+
+/* 📱 Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  nav ul li a {
+    font-size: 17px; /* sedikit lebih kecil dari desktop */
+  }
+}
+
+/* 💻 Laptop/Desktop (min 901px) */
+@media (min-width: 901px) {
+  nav ul li a {
+    font-size: 18px; /* tetap seperti default */
+  }
+}
